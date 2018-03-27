@@ -13,7 +13,7 @@
     <h3>{{currentFocus}}</h3>
     <br>
     <ul class="card-block center">
-       <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle"> {{currentRecipe.title | uppercase}}</div>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="editRecipe(currentRecipe)">Edit</button><hr></li>
+       <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle" (click)="editRecipe(currentRecipe)"> {{currentRecipe.title | uppercase}}</div><div>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}</div><br><hr></li>
      </ul>
   </div>
 </div>
