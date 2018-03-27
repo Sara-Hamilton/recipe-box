@@ -10,6 +10,7 @@
   </div>
   <div class="container-flex">
     <div class="center">
+      <!-- <button type="button" class="btn btn-success">Add a Recipe</button> -->
       <h3>{{currentFocus}}</h3>
       <br>
       <ul class="card-block center">
@@ -42,5 +43,31 @@
       </div>
     </div>
   </div>
+
+  <!-- Input form to create a new recipe -->
+  <!-- <div *ngIf="createRecipe"> -->
+    <!-- <h3>New Recipe</h3>
+    <div class="row">
+      <div class="col-md-2">
+        <label>Title:</label>
+      </div>
+      <div class="col-md-10">
+        <input [(ngModel)]="recipeTitle">
+      </div>
+      <div class="col-md-2">
+        <label>Ingredients:</label>
+      </div>
+      <div class="col-md-10">
+        <input size=100 [(ngModel)]="ingredients">
+      </div>
+      <div class="col-md-2">
+        <label>Directions:</label>
+      </div>
+      <div class="col-md-6">
+        <textarea name="message" rows="10" cols="100" [(ngModel)]="directions"></textarea>
+        <button class="btn btn-info" (click)="createRecipe()">Submit</button>
+      </div>
+    </div> -->
+  <!-- </div> -->
 
 </div>
