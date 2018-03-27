@@ -16,6 +16,9 @@ export class AppComponent {
   // viewRecipe(clickedRecipe) {
   //   this.selectedRecipe = clickedRecipe;
   // }
+  showDetails(clickedRecipe) {
+    this.detailedRecipe = clickedRecipe;
+  }
 
   editRecipe(clickedRecipe) {
     this.selectedRecipe = clickedRecipe;
@@ -37,4 +40,5 @@ export class AppComponent {
   ]
 
   selectedRecipe: Recipe = null;
+  detailedRecipe: Recipe = null;
 }
