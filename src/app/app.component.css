@@ -21,3 +21,7 @@ li {
   font-size: 2rem;
   padding: 1rem;
 }
+
+button {
+  margin: 5px;
+}

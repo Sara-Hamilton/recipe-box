@@ -20,6 +20,10 @@ export class AppComponent {
     this.detailedRecipe = clickedRecipe;
   }
 
+  hideDetails(clickedRecipe) {
+    this.detailedRecipe = null;
+  }
+
   editRecipe(clickedRecipe) {
     this.selectedRecipe = clickedRecipe;
   }
