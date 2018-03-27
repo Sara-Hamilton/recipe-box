@@ -37,12 +37,19 @@ export class AppComponent {
     this.selectedRecipe = null;
   }
 
-  // createRecipe(recipeTitle, ingredients, directions) {
-  //   let newRecipe = new Recipe(recipeTitle, ingredients, directions);
-  //   recipes.push(newRecipe);
+  // let newRecipe = null;
+  // showRecipeForm() {
+  //   newRecipe = true;
   // }
+
+  createRecipe(recipeTitle, ingredients, directions) {
+    let newRecipe = new Recipe(recipeTitle, ingredients, directions);
+    this.recipes.push(newRecipe);
+  }
+
 
 
   selectedRecipe: Recipe = null;
   detailedRecipe: Recipe = null;
+
 }
