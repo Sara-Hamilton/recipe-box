@@ -7,7 +7,7 @@ import { Recipe } from './models/recipe.model'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // currentRecipe: string = this.recipe;
+  currentFocus: string = 'Recipes that use water';
   title = 'Recipe Box';
 
   // firstRecipe = {

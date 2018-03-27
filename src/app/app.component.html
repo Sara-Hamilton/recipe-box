@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="center">
   <h1>Welcome to {{ title }}</h1>
-  <h3>{{currentRecipe}}</h3>
+  <h3>{{currentFocus}}</h3>
   <ul>
      <li *ngFor="let currentRecipe of recipes">Title: {{currentRecipe.title}} <br>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<hr></li>
    </ul>
