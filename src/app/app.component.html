@@ -18,25 +18,27 @@
   </div>
 </div>
 
-
-<h3>Edit Recipe:  {{selectedRecipe.title}}</h3>
-<div class="row">
-  <div class="col-md-2">
-    <label>Title:</label>
-  </div>
-  <div class="col-md-10">
-    <input [(ngModel)]="selectedRecipe.title">
-  </div>
-  <div class="col-md-2">
-    <label>Ingredients:</label>
-  </div>
-  <div class="col-md-10">
-    <input size=100 [(ngModel)]="selectedRecipe.ingredients">
-  </div>
-  <div class="col-md-2">
-    <label>Directions:</label>
-  </div>
-  <div class="col-md-6">
-    <textarea name="message" rows="10" cols="100" [(ngModel)]="selectedRecipe.directions"></textarea>
+<div *ngIf="selectedRecipe">
+  <h3>Edit Recipe:  {{selectedRecipe.title}}</h3>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Title:</label>
+    </div>
+    <div class="col-md-10">
+      <input [(ngModel)]="selectedRecipe.title">
+    </div>
+    <div class="col-md-2">
+      <label>Ingredients:</label>
+    </div>
+    <div class="col-md-10">
+      <input size=100 [(ngModel)]="selectedRecipe.ingredients">
+    </div>
+    <div class="col-md-2">
+      <label>Directions:</label>
+    </div>
+    <div class="col-md-6">
+      <textarea name="message" rows="10" cols="100" [(ngModel)]="selectedRecipe.directions"></textarea>
+      <button class="btn btn-info" (click)="finishedEditing()">Submit</button>
+    </div>
   </div>
 </div>

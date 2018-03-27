@@ -18,6 +18,10 @@ export class AppComponent {
     this.selectedRecipe = clickedRecipe;
   }
 
+  finishedEditing() {
+    this.selectedRecipe = null;
+  }
+
   recipes: Recipe[] = [
     new Recipe('coffee', 'coffee grounds, water', 'use coffee maker'),
     new Recipe('jell-o', 'jello mix, water', 'read the box'),
@@ -29,5 +33,5 @@ export class AppComponent {
     new Recipe('crystal light', 'crystal light packet, water', 'add 4 crystal light packs to 16oz water')
   ]
 
-  selectedRecipe: Recipe = this.recipes[0];
+  selectedRecipe: Recipe = null;
 }
