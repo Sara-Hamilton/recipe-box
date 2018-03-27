@@ -1,11 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="card-block center">
+  <h1>Welcome to {{ title }}</h1>
+  <h3 *ngIf="userName">{{userName}}'s Recipe Box</h3>
+</div>
+<div class="card-block center">
+  <form ng-submit="submit()">
+    <input style="text-align: center" [(ngModel)]="userName" type="text" name="user" placeholder="Enter a name here!">
+    <button type="submit" ng-submit="submit()">submit</button>
+  </form>
+</div>
 <div class="container-flex">
   <div class="center">
-    <h1>Welcome to {{ title }}</h1>
     <h3>{{currentFocus}}</h3>
     <br>
     <ul class="card-block center">
-       <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle">Title: {{currentRecipe.title}}</div>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="editTask()">Edit</button><hr></li>
+       <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle"> {{currentRecipe.title | uppercase}}</div>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="editRecipe()">Edit</button><hr></li>
      </ul>
   </div>
 </div>

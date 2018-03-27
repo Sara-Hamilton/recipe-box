@@ -9,11 +9,12 @@ a {
 
 ul{
   list-style: none;
-  display: inline-flex;
 }
 
 li {
-  padding-left: 32px;
+  padding: 1rem;
+  display: inline-block;
+
 }
 
 .recipeTitle {

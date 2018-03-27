@@ -10,14 +10,24 @@ export class AppComponent {
   currentFocus: string = 'Recipes that use water';
   title = 'Recipe Box';
 
-  // firstRecipe = {
-  //   title: "coffee",
-  //   ingredients: "coffee grounds, water",
-  //   directions: "use coffee maker"
-  // }
+  addName() {
+  }
+
+
+  editRecipe(clickedRecipe) {
+    this.selectedRecipe = clickedRecipe;
+  }
+
   recipes: Recipe[] = [
     new Recipe('coffee', 'coffee grounds, water', 'use coffee maker'),
-    new Recipe('jello', 'jello mix, water', 'read the box'),
+    new Recipe('jell-o', 'jello mix, water', 'read the box'),
     new Recipe('hard boiled eggs', 'eggs, water', 'boil eggs for 12 minutes'),
+    new Recipe('hot dogs', 'hot dogs, water', 'boil them until they fall apart'),
+    new Recipe('hot chocolate', 'cocoa powder, water, milk', 'microwave it'),
+    new Recipe('frozen water', '8-12 cups water', 'boil it, then freeze to save for later'),
+    new Recipe('ramen', 'ramen packet, msg, salt', 'remove plastic, then boil it, duh'),
+    new Recipe('crystal light', 'crystal light packet, water', 'add 4 crystal light packs to 16oz water')
   ]
+
+  selectedRecipe: Recipe = this.recipes[0];
 }
