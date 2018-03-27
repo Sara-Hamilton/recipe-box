@@ -1,7 +1,22 @@
+
 a {
   color: black;
 }
 
 .center {
   text-align: center;
+}
+
+ul{
+  list-style: none;
+  display: inline-flex;
+}
+
+li {
+  padding-left: 32px;
+}
+
+.recipeTitle {
+  font-size: 2rem;
+  padding: 1rem;
 }
