@@ -10,11 +10,11 @@ export class AppComponent {
   // currentRecipe: string = this.recipe;
   title = 'Recipe Box';
 
-  firstRecipe = {
-    title: "coffee",
-    ingredients: "coffee grounds, water",
-    directions: "use coffee maker"
-  }
+  // firstRecipe = {
+  //   title: "coffee",
+  //   ingredients: "coffee grounds, water",
+  //   directions: "use coffee maker"
+  // }
   recipes: Recipe[] = [
     new Recipe('coffee', 'coffee grounds, water', 'use coffee maker'),
     new Recipe('jello', 'jello mix, water', 'read the box'),

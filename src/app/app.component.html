@@ -3,8 +3,6 @@
   <h1>Welcome to {{ title }}</h1>
   <h3>{{currentRecipe}}</h3>
   <ul>
-     <li>{{firstRecipe.title}}</li>
-     <li>{{firstRecipe.ingredients}}</li>
-     <li>{{firstRecipe.directions}}</li>
+     <li *ngFor="let currentRecipe of recipes">Title: {{currentRecipe.title}} <br>Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<hr></li>
    </ul>
 </div>
