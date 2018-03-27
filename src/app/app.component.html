@@ -1,43 +1,46 @@
-<div class="card-block center">
-  <h1>Welcome to {{ title }}</h1>
-  <h3 *ngIf="userName">{{userName}}'s Recipe Box</h3>
-</div>
-<div class="card-block center">
+<div class="container">
+
   <form>
+    <label>Recipe Box Owner:</label>
     <input style="text-align: center" [(ngModel)]="userName" type="text" name="user" placeholder="Enter a name here!">
   </form>
-</div>
-<div class="container-flex">
-  <div class="center">
-    <h3>{{currentFocus}}</h3>
-    <br>
-    <ul class="card-block center">
-       <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle" (click)="showDetails(currentRecipe)"> {{currentRecipe.title | uppercase}}</div><div *ngIf="detailedRecipe === currentRecipe">Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="hideDetails(currentRecipe)" >Hide Details</button><button class="btn btn-info" (click)="editRecipe(currentRecipe)" >Edit</button></div><hr></li>
-     </ul>
+  <div class="jumbotron">
+    <h1>Welcome to {{ title }}</h1>
+    <h3 *ngIf="userName">{{userName}}'s Recipe Box</h3>
   </div>
-</div>
+  <div class="container-flex">
+    <div class="center">
+      <h3>{{currentFocus}}</h3>
+      <br>
+      <ul class="card-block center">
+         <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle" (click)="showDetails(currentRecipe)"> {{currentRecipe.title | uppercase}}</div><div *ngIf="detailedRecipe === currentRecipe">Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="hideDetails(currentRecipe)" >Hide Details</button><button class="btn btn-info" (click)="editRecipe(currentRecipe)" >Edit</button></div><hr></li>
+       </ul>
+    </div>
+  </div>
 
-<div *ngIf="selectedRecipe">
-  <h3>Edit Recipe:  {{selectedRecipe.title}}</h3>
-  <div class="row">
-    <div class="col-md-2">
-      <label>Title:</label>
-    </div>
-    <div class="col-md-10">
-      <input [(ngModel)]="selectedRecipe.title">
-    </div>
-    <div class="col-md-2">
-      <label>Ingredients:</label>
-    </div>
-    <div class="col-md-10">
-      <input size=100 [(ngModel)]="selectedRecipe.ingredients">
-    </div>
-    <div class="col-md-2">
-      <label>Directions:</label>
-    </div>
-    <div class="col-md-6">
-      <textarea name="message" rows="10" cols="100" [(ngModel)]="selectedRecipe.directions"></textarea>
-      <button class="btn btn-info" (click)="finishedEditing()">Submit</button>
+  <div *ngIf="selectedRecipe">
+    <h3>Edit Recipe:  {{selectedRecipe.title}}</h3>
+    <div class="row">
+      <div class="col-md-2">
+        <label>Title:</label>
+      </div>
+      <div class="col-md-10">
+        <input [(ngModel)]="selectedRecipe.title">
+      </div>
+      <div class="col-md-2">
+        <label>Ingredients:</label>
+      </div>
+      <div class="col-md-10">
+        <input size=100 [(ngModel)]="selectedRecipe.ingredients">
+      </div>
+      <div class="col-md-2">
+        <label>Directions:</label>
+      </div>
+      <div class="col-md-6">
+        <textarea name="message" rows="10" cols="100" [(ngModel)]="selectedRecipe.directions"></textarea>
+        <button class="btn btn-info" (click)="finishedEditing()">Submit</button>
+      </div>
     </div>
   </div>
+
 </div>
