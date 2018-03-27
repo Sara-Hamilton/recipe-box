@@ -10,12 +10,6 @@ export class AppComponent {
   currentFocus: string = 'Recipes that use water';
   title = 'Recipe Box';
 
-  // addName() {
-  // }
-  //
-  // viewRecipe(clickedRecipe) {
-  //   this.selectedRecipe = clickedRecipe;
-  // }
   showDetails(clickedRecipe) {
     this.detailedRecipe = clickedRecipe;
   }
