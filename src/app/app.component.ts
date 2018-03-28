@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   public addRecipe: boolean = false;
-  
+
   showRecipeForm() {
     this.addRecipe = true;
   }
@@ -49,7 +49,9 @@ export class AppComponent {
     this.recipes.push(newRecipe);
   }
 
-
+  deleteRecipe(clickedRecipe) {
+    this.recipes = this.recipes.filter(Recipe => Recipe !== clickedRecipe);
+  }
 
   selectedRecipe: Recipe = null;
   detailedRecipe: Recipe = null;

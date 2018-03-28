@@ -14,7 +14,7 @@
       <h3>{{currentFocus}}</h3>
       <br>
       <ul class="card-block center">
-         <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle" (click)="showDetails(currentRecipe)"> {{currentRecipe.title | uppercase}}</div><div *ngIf="detailedRecipe === currentRecipe">Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="hideDetails(currentRecipe)" >Hide Details</button><button class="btn btn-info" (click)="editRecipe(currentRecipe)" >Edit</button></div><hr></li>
+         <li *ngFor="let currentRecipe of recipes"><div class="card card-block center bg-warning recipeTitle" (click)="showDetails(currentRecipe)"> {{currentRecipe.title | uppercase}}</div><div *ngIf="detailedRecipe === currentRecipe">Ingredients: {{currentRecipe.ingredients}} <br>Directions: {{currentRecipe.directions}}<br><button class="btn btn-info" (click)="hideDetails(currentRecipe)" >Hide Details</button><button class="btn btn-info" (click)="editRecipe(currentRecipe)">Edit Recipe</button><button class="btn btn-info" (click)="deleteRecipe(currentRecipe)">Delete Recipe</button></div><hr></li>
        </ul>
     </div>
   </div>
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  
+
   <div *ngIf="addRecipe">
     <h3>New Recipe</h3>
     <div class="row">
