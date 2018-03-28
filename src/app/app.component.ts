@@ -37,12 +37,14 @@ export class AppComponent {
     this.selectedRecipe = null;
   }
 
-  // let newRecipe = null;
-  // showRecipeForm() {
-  //   newRecipe = true;
-  // }
+  public addRecipe: boolean = false;
+  
+  showRecipeForm() {
+    this.addRecipe = true;
+  }
 
   createRecipe(recipeTitle, ingredients, directions) {
+    this.addRecipe = false;
     let newRecipe = new Recipe(recipeTitle, ingredients, directions);
     this.recipes.push(newRecipe);
   }

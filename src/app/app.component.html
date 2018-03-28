@@ -1,16 +1,16 @@
 <div class="container">
 
-  <form>
-    <label>Recipe Box Owner:</label>
-    <input style="text-align: center" [(ngModel)]="userName" type="text" name="user" placeholder="Enter a name here!">
-  </form>
   <div class="jumbotron">
     <h1>Welcome to {{ title }}</h1>
     <h3 *ngIf="userName">{{userName}}'s Recipe Box</h3>
   </div>
+  <form>
+    <label>Recipe Box Owner:</label>
+    <input style="text-align: center" [(ngModel)]="userName" type="text" name="user" placeholder="Enter a name here!">
+  </form>
   <div class="container-flex">
     <div class="center">
-      <!-- <button type="button" class="btn btn-success" (click)="showRecipeForm()">Add a Recipe</button> -->
+      <button type="button" class="btn btn-success" (click)="showRecipeForm()">Add a Recipe</button>
       <h3>{{currentFocus}}</h3>
       <br>
       <ul class="card-block center">
@@ -44,8 +44,8 @@
     </div>
   </div>
 
-  <!-- Input form to create a new recipe -->
-  <!-- <div *ngIf="newRecipe"> -->
+  
+  <div *ngIf="addRecipe">
     <h3>New Recipe</h3>
     <div class="row">
       <div class="col-md-2">
@@ -68,6 +68,6 @@
         <button class="btn btn-info" (click)="createRecipe(recipeTitle, ingredients, directions)">Submit</button>
       </div>
     </div>
-  <!-- </div> -->
+  </div>
 
 </div>
