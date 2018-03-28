@@ -8,9 +8,9 @@
     <label>Recipe Box Owner:</label>
     <input style="text-align: center" [(ngModel)]="userName" type="text" name="user" placeholder="Enter a name here!">
   </form>
+  <button type="button" class="btn btn-success" (click)="showRecipeForm()">Add a Recipe</button>
   <div class="container-flex">
     <div class="center">
-      <button type="button" class="btn btn-success" (click)="showRecipeForm()">Add a Recipe</button>
       <h3>{{currentFocus}}</h3>
       <br>
       <ul class="card-block center">
