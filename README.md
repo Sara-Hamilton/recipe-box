@@ -23,7 +23,7 @@ $ git clone https://github.com/Sara-Hamilton/recipe-box
 ```
 move into the directory
 ```
-$ cd tap-room
+$ cd recipe-box
 ```
 install npm
 ```
